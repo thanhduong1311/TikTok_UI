@@ -1,0 +1,58 @@
+.account {
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.avatar {
+    margin-right: 10px;
+    img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.info {
+    flex: 1;
+    .name {
+        color: var(--text-color);
+        font-size: 1.8rem;
+        line-height: 21px;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    .nickname {
+        color: var(--searchBoxIcon);
+        font-size: 1.6rem;
+        line-height: 18px;
+        color: rgba(22, 24, 35, 0.5);
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.blueTick {
+    color: rgba(32, 213, 236, 1);
+    margin-left: 5px;
+    font-size: 1.4rem;
+}
+
+.option {
+    padding: 8px;
+}
+
+.option:hover {
+    color: var(--primary-color);
+}

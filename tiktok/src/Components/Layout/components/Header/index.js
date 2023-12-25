@@ -1,4 +1,5 @@
 import Tippy from '@tippyjs/react/headless';
+import TippyTooltip from '@tippyjs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faSpinner,
@@ -6,6 +7,19 @@ import {
     faMagnifyingGlass,
     faPlus,
     faEllipsisVertical,
+    faMoon,
+    faKeyboard,
+    faCircleQuestion,
+    faGlobe,
+    faLightbulb,
+    faPaperPlane,
+    faEnvelope,
+    faUser,
+    faBookmark,
+    faCoins,
+    faVideo,
+    faGear,
+    faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import classNames from 'classnames/bind';
@@ -14,11 +28,93 @@ import styles from './Header.module.scss';
 import AccountItem from '../../../AccountItem';
 import { Wrapper as PopperWrapper } from '../../../Popper';
 import Button from '../../../Buttons/Button';
+import Menu from '../../../Menu';
+import Image from '../../../Image';
+
+const menuItems = [
+    {
+        icon: <FontAwesomeIcon icon={faLightbulb} />,
+        title: 'Trung tâm Nhà sáng tạo Live',
+        href: 'https://www.tiktok.com/live/creators/vi-VN/?enter_from=more&lang=vi-VN&region=VN',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faGlobe} />,
+        title: 'Tiếng Việt',
+        children: {
+            title: 'Ngôn ngữ',
+            data: [
+                {
+                    childrenId: 1,
+                    title: 'English',
+                    type: 'language',
+                },
+                {
+                    childrenId: 2,
+                    title: 'Tiếng Việt',
+                    type: 'language',
+                },
+                {
+                    childrenId: 3,
+                    title: 'にほんご',
+                    type: 'language',
+                },
+            ],
+        },
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        title: 'Phản Hồi và trợ giúp',
+        to: '/feedback',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        title: 'Phím tắt trên bàn phím',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faMoon} />,
+        title: 'Chế độ tối',
+    },
+];
+
+const userLoginMenu = [
+    {
+        icon: <FontAwesomeIcon icon={faUser} />,
+        title: 'Hồ Sơ',
+        to: '/feedback',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faBookmark} />,
+        title: 'Yêu Thích',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCoins} />,
+        title: 'Nhận xu',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faVideo} />,
+        title: 'Live Studio',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faGear} />,
+        title: 'Cài đặt',
+    },
+    ...menuItems,
+    {
+        icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
+        title: 'Đăng xuất',
+    },
+];
 
 const cs = classNames.bind(styles);
 
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
+
+    const userLogin = true;
+
+    const handleMenuChange = (item) => {
+        console.log(item);
+    };
 
     return (
         <div className={cs('wrapper')}>
@@ -112,13 +208,35 @@ function Header() {
                         Tải lên
                     </Button>
 
-                    <Button primary onClick={() => {}}>
-                        Đăng nhập
-                    </Button>
-
-                    <span>
-                        <FontAwesomeIcon className={cs('moreOption')} icon={faEllipsisVertical} />
-                    </span>
+                    {userLogin ? (
+                        <>
+                            <TippyTooltip content="Tin Nhắn">
+                                <FontAwesomeIcon className={cs('icons')} icon={faPaperPlane} />
+                            </TippyTooltip>
+                            <TippyTooltip content="Hộp Thư">
+                                <FontAwesomeIcon className={cs('icons')} icon={faEnvelope} />
+                            </TippyTooltip>
+                            <Menu items={userLoginMenu} onChange={handleMenuChange}>
+                                <Image
+                                    src={
+                                        'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/031ead30337d3bc55ba0a73aa2cf39b7~c5_720x720.jpeg?lk3s=a5d48078&x-expires=1703689200&x-signature=4MMnIYvpIH3ga%2FEsroT6G3V0kVM%3D'
+                                    }
+                                    fallback=""
+                                />
+                            </Menu>
+                        </>
+                    ) : (
+                        <>
+                            <Button primary onClick={() => {}}>
+                                Đăng nhập
+                            </Button>
+                            <Menu items={menuItems} onChange={handleMenuChange}>
+                                <span>
+                                    <FontAwesomeIcon className={cs('moreOption')} icon={faEllipsisVertical} />
+                                </span>
+                            </Menu>
+                        </>
+                    )}
                 </div>
             </div>
         </div>

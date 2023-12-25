@@ -41,7 +41,8 @@ function Button({
         large,
         text,
         disable,
-        rounder,
+        rounder
+      
     });
 
     return (

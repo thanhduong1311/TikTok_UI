@@ -1,0 +1,49 @@
+.wrapper {
+    margin-bottom: 8px;
+    width: 224px;
+}
+
+/// MENU ITEM
+.MenuItem {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 32px;
+    max-height: 48px;
+    transition: background-color 200ms ease-in-out 0s;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &.active {
+        color: var(--primary-color);
+        .icon {
+            display: none;
+        }
+        .activeIcon {
+            display: block;
+        }
+    }
+}
+.activeIcon img,
+.icon img {
+    height: 32px;
+}
+
+.activeIcon {
+    display: none;
+}
+
+.title {
+    font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 8px;
+}

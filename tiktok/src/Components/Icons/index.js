@@ -15,6 +15,16 @@ const icons = {
     media: require('./mediaIcon.svg').default,
     setting: require('./settingIcon.svg').default,
     logout: require('./logoutIcon.svg').default,
+    home: require('./homeIcon.svg').default,
+    homeActive: require('./homeActiveIcon.svg').default,
+    friends: require('./friendsIcon.svg').default,
+    friendsActive: require('./friendsActiveIcon.svg').default,
+    explorer: require('./exploxerIcon.svg').default,
+    explorerActive: require('./exploxerActiveIcon.svg').default,
+    media: require('./mediaIcon.svg').default,
+    mediaActive: require('./mediaActiveIcon.svg').default,
+    user: require('./userIcon.svg').default,
+    userActive: require('./userActiveIcon.svg').default,
     
 }
 

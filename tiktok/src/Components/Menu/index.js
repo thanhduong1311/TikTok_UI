@@ -21,8 +21,7 @@ function Menu({ children, items = [], onChange = () => {} }) {
     const backHandle = () => {
         setTabMenus((pre) => pre.slice(0, tabMenus.length - 1));
     };
-    const handleResetToFirstPage = () =>  {s
-        etTabMenus((pre) => pre.slice(0, 1))
+    const handleResetToFirstPage = () =>  {setTabMenus((pre) => pre.slice(0, 1))
     }
 
     return (

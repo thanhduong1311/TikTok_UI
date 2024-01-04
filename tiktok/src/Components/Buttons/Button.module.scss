@@ -19,6 +19,10 @@
         pointer-events: none;
         opacity: 0.5;
     }
+    & span {
+        display: block;
+        width: 100%;
+    }
 }
 
 
@@ -43,7 +47,6 @@
 .outline {
     color: var(--primary-color);
     border-color: var(--primary-color);
-
     &:hover {
         background-color: rgba(254, 44, 85, 0.08);
     }
@@ -58,8 +61,12 @@
 }
 
 .large {
+    margin-top: 20px;
     padding: 12px 14px;
     min-width: 150px;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
 }
 
 .text {

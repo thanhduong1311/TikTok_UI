@@ -1,8 +1,10 @@
 .search {
     display: flex;
-    margin: 6px 0;
+    width: 500px;
+    // margin: 6px 0;
     border: 1px solid transparent;
     border-radius: 92px;
+    height: 46px;
 
     &:hover {
         border: 1px solid var(--searchBoxIcon);
@@ -24,6 +26,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    flex: 1;
 
     input {
         font-weight: 400;
@@ -37,6 +40,7 @@
         color: var(--searchBoxText);
         caret-color: var(--primary-color);
         padding-right: 20px;
+
         
     }
 

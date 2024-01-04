@@ -21,7 +21,6 @@
 
     .customButton:last-child {
         border-radius: 0 0 9px 9px;
-        border-top: 1px solid var(--headerBorder);
     }
 
     .menuIcon {
@@ -61,3 +60,13 @@
     font-weight: 600;
 }
 
+.btnContent {
+    display: flex;
+    justify-content: center;
+}
+
+.menuBody {
+    padding-bottom: 5px;
+    max-height: 500px;
+    overflow-y: scroll;
+}

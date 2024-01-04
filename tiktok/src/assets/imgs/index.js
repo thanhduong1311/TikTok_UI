@@ -1,7 +1,6 @@
-
-
-const images = ()=> {
+const images = {
+    logo: require('./TikTok.svg').default,
     noImage: require('./defaultAvatar.png')
-}
+};
 
-export default images
+export default images;

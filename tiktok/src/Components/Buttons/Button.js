@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { children } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const cs = classNames.bind(styles);
 
@@ -41,8 +42,7 @@ function Button({
         large,
         text,
         disable,
-        rounder
-      
+        rounder,
     });
 
     return (
@@ -50,6 +50,21 @@ function Button({
             <span>{children}</span>
         </Comp>
     );
+}
+
+Button.propTypes = {
+    to: PropTypes.string,
+    href :PropTypes.string,
+    primary : PropTypes.bool,
+    outline :PropTypes.bool,
+    small :PropTypes.bool,
+    large :PropTypes.bool,
+    text :PropTypes.bool,
+    disable :PropTypes.bool,
+    rounder :PropTypes.bool,
+    onClick :PropTypes.func,
+    children :PropTypes.node.isRequired,
+    className :PropTypes.string
 }
 
 export default Button;

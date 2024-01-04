@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const cs = classNames.bind(styles);
 
@@ -17,6 +18,11 @@ function HeaderMenu({title, onClickBack}) {
             </h4>
         </header>
      );
+}
+
+HeaderMenu.propTypes = {
+    title : PropTypes.string,
+    onClickBack : PropTypes.func
 }
 
 export default HeaderMenu;

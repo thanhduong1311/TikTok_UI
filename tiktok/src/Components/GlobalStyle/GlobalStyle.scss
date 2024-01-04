@@ -36,7 +36,7 @@ input,
     border: none;
 }
 
-a[href] {
+a{
     color: var(--text-color);
     text-decoration: none;
 }
@@ -52,9 +52,27 @@ body {
         color: rgb(255, 255, 255);
         background-color: rgba(84, 84, 84, 0.92);
         padding: 8px;
+        overflow-y:scroll;
     }
 
     .tippy-arrow {
         color: rgba(84, 84, 84, 0.92);
     }
+}
+
+
+// Scroll bar css
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+html ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
 }

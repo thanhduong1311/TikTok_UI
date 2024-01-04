@@ -2,14 +2,12 @@ import classNames from 'classnames/bind';
 import styles from './Image.module.scss';
 import { forwardRef, useState } from 'react';
 import images from '../../assets/imgs';
+import PropTypes from 'prop-types';
 
 const cs = classNames.bind(styles);
 
-function Image({ src, fallback, ...props }, ref) {
+const Image = forwardRef(({ src, fallback, ...props }, ref) => {
     const [fallbackUrl, setFallbackUrl] = useState('');
-
-    console.log(images.noImage)
-
 
     const handleError = () => {
         setFallbackUrl(images.noImage);
@@ -20,6 +18,12 @@ function Image({ src, fallback, ...props }, ref) {
             <img ref={ref} className={cs('wrapper')} src={fallbackUrl || src} {...props} onError={handleError} />
         </>
     );
-}
+});
 
-export default forwardRef(Image);
+Image.propTypes = {
+    src: PropTypes.string,
+    fallback: PropTypes.string,
+    className: PropTypes.string,
+};
+
+export default Image;

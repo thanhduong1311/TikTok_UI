@@ -11,13 +11,14 @@
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    max-width: 100%;
+    // max-width: 100%;
     padding-right: 24px;
     padding-left: 16px;
     border-bottom: 1px solid var(--headerBorder);
 }
 
 .logo {
+    width: 300px;
 }
 
 .search {
@@ -126,8 +127,14 @@
     display: flex;
     align-items: center;
 
+    .btnContent {
+        display: flex;align-items: center;
+    }
+
     .uploadIcon {
         margin-right: 4px;
+        width: 20px;
+        height: 20px;
     }
 
     .moreOption {
@@ -143,4 +150,17 @@
         margin-left:   16px;
         font-size: 1.8rem;
     }
+
+    .icons.send {
+        width: 26px;
+    }
+
+    .icons.inbox {
+        margin-right: 16px;
+    }
+}
+
+.customMenu .customButton:last-child {
+    border-radius: 0 0 9px 9px;
+    border-top: 1px solid #000;;
 }

@@ -1,4 +1,6 @@
 .wrapper {
+    display: flex;
+    align-items: center;
     border-radius: 4px;
     min-height: 36px;
     align-items: center;
@@ -67,4 +69,6 @@
     }
 }
 
-
+.lastEle {
+    border-top: 1px solid #ccc;
+}

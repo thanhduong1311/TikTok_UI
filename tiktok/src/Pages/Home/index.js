@@ -1,7 +1,14 @@
+import VideoBrowser from "./VideoBrowser/VideoBrowser";
+import { Video } from "../../components/Video";
+
+
+
 function Home() {
     return (
         <>
-            <div>HEHEHE</div>
+           <VideoBrowser>
+                <Video/>
+           </VideoBrowser>
         </>
     );
 }

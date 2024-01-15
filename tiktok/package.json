@@ -20,6 +20,7 @@
         "react-router-dom": "^6.21.1",
         "react-scripts": "5.0.1",
         "react-svg": "^16.1.32",
+        "simplebar-react": "^3.2.4",
         "web-vitals": "^2.1.4"
     },
     "scripts": {

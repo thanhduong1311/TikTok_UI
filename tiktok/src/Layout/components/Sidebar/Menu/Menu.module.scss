@@ -1,10 +1,12 @@
 .wrapper {
     margin-bottom: 8px;
     width: 224px;
+   
 }
 
 /// MENU ITEM
 .MenuItem {
+
     display: flex;
     align-items: center;
     color: var(--text-color);
@@ -30,6 +32,7 @@
             display: block;
         }
     }
+
 }
 .activeIcon img,
 .icon img {
@@ -47,3 +50,4 @@
     line-height: 24px;
     margin-left: 8px;
 }
+

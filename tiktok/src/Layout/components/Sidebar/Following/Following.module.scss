@@ -1,0 +1,47 @@
+.wrapper {
+    padding: 16px 0px;
+    color: var(--secondary-text);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+        top: 0px;
+    }
+}
+
+.heading {
+    padding: 0px 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.viewMoreBtn {
+
+
+    background: transparent;
+    border: none;
+    padding: 0px 8px;
+    margin-top: 8px;
+    cursor: pointer;
+
+
+    p {
+        color: var(--primary-color);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+}
+ 

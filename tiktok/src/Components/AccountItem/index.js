@@ -8,11 +8,16 @@ import PropTypes from 'prop-types';
 
 const cs = classNames.bind(styles);
 
-function AccountItem({data}) {
 
+function AccountItem({data, isSidebarItem}) {
+
+    const classes = cs('account', {
+        isSidebarItem
+    });
+    
 
     return (
-        <Link to={`/@${data.nickname}`} className={cs('account')}>
+        <Link to={`/@${data.nickname}`} className={classes}>
             <div className={cs('avatar')}>
                 <Image src={data.avatar}/>
             </div>
@@ -32,7 +37,8 @@ function AccountItem({data}) {
 }
 
 AccountItem.propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    isSidebarItem : PropTypes.bool
   };
 
 export default AccountItem;

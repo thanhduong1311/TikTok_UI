@@ -1,0 +1,21 @@
+.wrapper {
+    margin-bottom: 10px;
+    padding-left: 8px;
+}
+
+.item {
+    color: var(--secondary-text);
+    font-family: "IBM Plex Sans", TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline
+    }
+
+}
+

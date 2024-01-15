@@ -56,3 +56,43 @@
 .option:hover {
     color: var(--primary-color);
 }
+
+.isSidebarItem {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    transition: background 200ms ease-in-out 0s;
+
+    .option {
+        display: none;
+    }
+
+    .avatar {
+        margin-right: 10px;
+        width: 32px;
+        height: 32px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    .info {
+        max-height: 32px;
+    }
+
+    .name {
+        font-size: 1.6rem;
+        line-height: 21px;
+    }
+
+    .nickname {
+        font-size: 1.2rem;
+        line-height: 15px;
+    }
+}

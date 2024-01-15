@@ -1,11 +1,34 @@
 .wrapper {
-    width: 240px;
+    width: 280px;
     padding: 20px 0px 26px 8px;
     display: flex;
     flex-direction: column;
     min-height: 100%;
 }
 
+
+
 .sidebar {
 
+}
+
+
+.customScrollBar {
+    max-height: calc(100vh - 60px);
+}
+
+
+.wrapper ::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+    display: none;
+}
+.wrapper ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+.wrapper ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0) ;
 }

@@ -25,6 +25,7 @@ const icons = {
     mediaActive: require('./mediaActiveIcon.svg').default,
     user: require('./userIcon.svg').default,
     userActive: require('./userActiveIcon.svg').default,
+    effect: require('./effectIcon.svg').default,
     
 }
 

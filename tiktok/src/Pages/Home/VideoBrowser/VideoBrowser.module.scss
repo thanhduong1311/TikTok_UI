@@ -1,0 +1,15 @@
+.wrapper {
+    position: relative;
+    margin: 0px auto;
+    width: 100%;
+    min-height: 320px;
+    background-color: red;
+    min-width: 420px;
+    flex-shrink: 1;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
